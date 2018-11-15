@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   aff_a.c                                            :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kelugo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/14 15:23:49 by kelugo            #+#    #+#             */
-/*   Updated: 2018/11/14 16:15:46 by kelugo           ###   ########.fr       */
+/*   Created: 2018/11/14 18:31:16 by kelugo            #+#    #+#             */
+/*   Updated: 2018/11/14 18:43:50 by kelugo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int     main(int argc, char *argv[])
+char    *ft_strcpy(char *s1, char *s2)
 {
-    if (argc != 2)
-        write(1, "a", 1);
-    else
+    int i;
+
+    i = 0;
+    while (s2[i] != '\0')
     {
-        while (*argv[1])
-            {
-            if (*argv[1] == 'a')                {
-                  write (1, "a", 1);
-                break;
-            }
-            else
-            argv[1]++;                }
+        s1[i] = s2[i];
+        i++;
     }
-     write(1, "\n", 1);
-     return (0);
+    s1[i] = s2[i];
+    return (s1);
 }

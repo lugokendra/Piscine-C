@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   aff_a.c                                            :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kelugo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/14 15:23:49 by kelugo            #+#    #+#             */
-/*   Updated: 2018/11/14 16:15:46 by kelugo           ###   ########.fr       */
+/*   Created: 2018/11/14 16:06:39 by kelugo            #+#    #+#             */
+/*   Updated: 2018/11/14 16:13:12 by kelugo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int     main(int argc, char *argv[])
+void ft_print_numbers(void)
 {
-    if (argc != 2)
-        write(1, "a", 1);
-    else
-    {
-        while (*argv[1])
-            {
-            if (*argv[1] == 'a')                {
-                  write (1, "a", 1);
-                break;
-            }
-            else
-            argv[1]++;                }
-    }
-     write(1, "\n", 1);
-     return (0);
+    write(1, "0123456789", 10);
+}
+
+int     main(void)
+{
+    ft_print_numbers();
+    return (0);
 }

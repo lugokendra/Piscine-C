@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   aff_a.c                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kelugo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/14 15:23:49 by kelugo            #+#    #+#             */
-/*   Updated: 2018/11/14 16:15:46 by kelugo           ###   ########.fr       */
+/*   Created: 2018/11/14 19:23:16 by kelugo            #+#    #+#             */
+/*   Updated: 2018/11/14 19:45:12 by kelugo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-int     main(int argc, char *argv[])
+int     ft_strlen(char *str)
 {
-    if (argc != 2)
-        write(1, "a", 1);
-    else
-    {
-        while (*argv[1])
-            {
-            if (*argv[1] == 'a')                {
-                  write (1, "a", 1);
-                break;
-            }
-            else
-            argv[1]++;                }
-    }
-     write(1, "\n", 1);
-     return (0);
+    int i;
+
+    i = 0;
+    while (str[i])
+        i++;
+    return (i);
+}
+
+int		main(void)
+{
+	char x[] = "string thing";
+
+	printf("%d", ft_strlen(x));
 }
